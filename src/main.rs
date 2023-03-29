@@ -10,8 +10,6 @@ fn torque(torque_input: f32, gear_ratio: f32) -> f32
     return torque_input * gear_ratio;
 }
 
-
-
 //5.5; for the wheel's bore length. 
 // plan: 5 > 6 > 7 > 10 teeth >> ended up using something else.
 fn time_to_reach_top(
@@ -36,7 +34,6 @@ fn main()
     const max_speed: f32 = 9.7*(10 as f32); // RPM
     const weight: f32 = 4.4;
     const motor_torque: f32 = 0.5;
-    const motor_speed: f32 = 9600.0;
 
     println!("Max torque: {} Ncm", torque(max_torque, gear_ratio(5.0, 6.0)));
     println!("Gear ratio: {}", gear_ratio(5.0, 6.0)); // starting to think I should've used Python instead.
